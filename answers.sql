@@ -18,4 +18,5 @@ VALUES
     (102, 'Mouse'),
     (103, 'Phone');
 
+Question 2 Achieving 2NF (Second Normal Form)
 
