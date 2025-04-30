@@ -26,7 +26,7 @@ CREATE TABLE Customers (
     Customer_Name VARCHAR(100)
 );
 
-step 2: insert data into customer
+step 2: insert data into customer in 2NF
     INSERT INTO Customers (Customer_ID, Customer_Name)
 VALUES
     (1, 'John Doe'),
@@ -42,7 +42,7 @@ CREATE TABLE Orders (
     PRIMARY KEY (Order_ID, Product_Name),
     FOREIGN KEY (Customer_ID) REFERENCES Customers(Customer_ID)
 );
-step 4: insert data into order
+step 4: insert data into order in 2ND NF
 INSERT INTO Orders (Order_ID, Customer_ID, Product_Name, Quantity)
 VALUES
     (101, 1, 'Laptop', 2),
