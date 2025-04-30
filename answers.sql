@@ -20,3 +20,36 @@ VALUES
 
 Question 2 Achieving 2NF (Second Normal Form)
 
+step 1: create a customers table
+CREATE TABLE Customers (
+    Customer_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Customer_Name VARCHAR(100)
+);
+
+step 2: insert data into customer
+    INSERT INTO Customers (Customer_ID, Customer_Name)
+VALUES
+    (1, 'John Doe'),
+    (2, 'Jane Smith'),
+    (3, 'Emily Clark');
+
+step 3: create an orders table
+CREATE TABLE Orders (
+    Order_ID INT,
+    Customer_ID INT,
+    Product_Name VARCHAR(100),
+    Quantity INT,
+    PRIMARY KEY (Order_ID, Product_Name),
+    FOREIGN KEY (Customer_ID) REFERENCES Customers(Customer_ID)
+);
+step 4: insert data into order
+INSERT INTO Orders (Order_ID, Customer_ID, Product_Name, Quantity)
+VALUES
+    (101, 1, 'Laptop', 2),
+    (101, 1, 'Mouse', 1),
+    (102, 2, 'Tablet', 3),
+    (102, 2, 'Keyboard', 1),
+    (102, 2, 'Mouse', 2),
+
+
+
